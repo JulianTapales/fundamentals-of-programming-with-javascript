@@ -1,0 +1,43 @@
+9<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First webpage ever</title>
+
+    <style media="screen">
+      body {
+        background-color: orange;
+      }
+      h1 {
+        color: red;
+      }
+
+      h2 {
+        color: blue;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Hello World</h1>
+    <h2>This is a webpage</h2>
+  </body>
+
+  <script type="text/javascript">
+    console.log(window.document.body)
+
+    const makeRGBColor = (x, y) => {
+      return "rgb("+x+", "+y+", 0)"
+    }
+
+    window.onmousemove = (e) => {
+      // console.log(e.clientX, e.clientY);
+      console.log(makeRGBColor(e.clientX, e.clientY));
+      window.document.body.style.backgroundColor = makeRGBColor(e.clientX, e.clientY)
+
+    }
+  </script>
+
+
+</html>
